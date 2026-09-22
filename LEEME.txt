@@ -1,0 +1,19 @@
+SONIDOS DE LOS ANIMALES
+=======================
+Los sonidos de 14 animales YA ESTÁN INCRUSTADOS dentro de juego.html
+(vaca, cerdo, caballo, oveja, gallo, pollito, pato, perro, gato, cabra,
+burro, ganso, pavo y carnero). Los recorté a su mejor parte (máximo unos
+2,6 segundos) y les emparejé el volumen. El conejo no tiene sonido: la voz
+dice que casi no hace ruido.
+
+Esta carpeta es opcional. Si querés cambiar un sonido, poné en esta carpeta un
+archivo con el nombre del animal y ese va a tener prioridad sobre el incrustado:
+
+  vaca.mp3   cerdo.mp3   caballo.mp3   oveja.mp3   gallo.mp3
+  pollito.mp3  pato.mp3  perro.mp3  gato.mp3  conejo.mp3
+  cabra.mp3  burro.mp3  ganso.mp3  pavo.mp3  carnero.mp3
+
+(sirve .mp3, .ogg o .wav; conviene que duren entre 1 y 3 segundos)
+
+Para ver cuáles encontró el juego: mantené apretado el engranaje (arriba a la
+derecha) y mirá la lista con tildes.

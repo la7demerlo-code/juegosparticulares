@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Juegos Particulares</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 20px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn-juego1 {
+            background-color: #4CAF50; /* Verde */
+        }
+        .btn-juego2 {
+            background-color: #2196F3; /* Azul */
+        }
+        .btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎮 Panel de Juegos Particulares</h1>
+    
+    <div class="container">
+        <!-- Botón para el primer juego (el que antes era inicio.html) -->
+        <a href="inicio.html" class="btn btn-juego1">🕹️ Ir al Juego Principal</a>
+        
+        <!-- Botón para el segundo juego -->
+        <a href="WORDWALL-Cl.html" class="btn btn-juego2">🧩 Ir a Wordwall</a>
+    </div>
+
+</body>
+</html>
