@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>21 Juegos Visuales de Wordwall — Niños con   (5-7 años)</title>
+<style>
+body { margin:0; background:#eeeeee; padding:20px 0; }
+.tablero { font-family:'Georgia',serif; max-width:520px; margin:0 auto; padding:10px; box-sizing:border-box; }
+
+.tablero .intro { background:#fff8e6; border-left:5px solid #F6B40E; padding:10px 14px; border-radius:6px; font-size:0.9rem; line-height:1.4; margin-bottom:12px; }
+
+.tablero .btn-ayuda { display:block; width:100%; box-sizing:border-box; background:linear-gradient(180deg,#F6B40E 0%,#d99a00 100%); color:#001d3d; border:1px solid #001d3d; padding:12px; border-radius:8px; font-weight:bold; font-size:0.95rem; cursor:pointer; margin-bottom:16px; }
+
+.tablero .grilla { display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; }
+
+.tablero .cat-btn {
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-decoration:none;
+  background: linear-gradient(180deg, #003a75 0%, #001d3d 100%);
+  color:white;
+  padding:10px 4px;
+  border-radius:10px;
+  text-align:center;
+  font-weight:bold;
+  font-size:0.7rem;
+  line-height:1.2;
+  border:1px solid #F6B40E;
+  min-height:70px;
+  box-shadow:
+    0 4px 0 #001229,
+    0 6px 10px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.15);
+  transform: translateY(0);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+  cursor:pointer;
+}
+.tablero .cat-btn:hover {
+  background: linear-gradient(180deg, #004a92 0%, #002a54 100%);
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 0 #001229,
+    0 10px 14px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+}
+.tablero .cat-btn:active {
+  transform: translateY(3px);
+  box-shadow:
+    0 1px 0 #001229,
+    0 2px 4px rgba(0,0,0,0.3),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+}
+.tablero .cat-btn .emoji { display:block; font-size:1.4rem; margin-bottom:3px; }
+
+.popup-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center; padding:16px; }
+.popup-overlay.visible { display:flex; }
+.popup-caja { background:#fff8e6; border:3px solid #F6B40E; border-radius:14px; max-width:400px; max-height:80vh; overflow-y:auto; padding:20px; font-family:'Georgia',serif; color:#3d3423; box-shadow:0 10px 30px rgba(0,0,0,0.4); }
+.popup-caja h3 { margin-top:0; color:#001d3d; }
+.popup-caja p { font-size:0.9rem; line-height:1.5; }
+.popup-caja button { margin-top:10px; width:100%; box-sizing:border-box; padding:11px; background:#3d3423; color:white; border:none; border-radius:8px; font-weight:bold; cursor:pointer; }
+</style>
+</head>
+<body>
+
+<div class="tablero">
+
+  <p class="intro">🧩 <strong>21 juegos visuales de Wordwall</strong> para chicos con   de 5 a 7 años que todavía no leen: emparejar pictogramas, rutinas y emociones con imágenes. Tocá cualquier botón para jugar directo.</p>
+
+  <button class="btn-ayuda" onclick="document.getElementById('popup-ayuda').classList.add('visible')">❓ Ayuda para el adulto (leer antes)</button>
+
+  <div class="grilla">
+    <a class="cat-btn" href="https://wordwall.net/es/resource/63595820/emociones-pictogramas?ref=community" target="_blank" rel="noopener"><span class="emoji">😊</span>Emociones Pictogramas</a>
+    <a class="cat-btn" href="https://wordwall.net/es/resource/84979763/pictogramas-acciones?ref=community" target="_blank" rel="noopener"><span class="emoji">🏃</span>Pictogramas Acciones</a>
+    <a class="cat-btn" href="https://wordwall.net/es/resource/64397128/pictogramas-ciudad?ref=community" target="_blank" rel="noopener"><span class="emoji">🏙️</span>Pictogramas Ciudad</a>
+    <a class="cat-btn" href="https://wordwall.net/es/resource/55962163/pictogramas-2?ref=community" target="_blank" rel="noopener"><span class="emoji">🖼️</span>Pictogramas 2</a>
+    <a class="cat-btn" href="https://wordwall.net/es/resource/57535907/pictogramas?ref=community" target="_blank" rel="noopener"><span class="emoji">🖼️</span>Pictogramas (Dilea)</a>
+    <a class="cat-btn" href="https://wordwall.net/es/resource/82063851/pictogramas?ref=community" target="_blank" rel="noopener"><span class="emoji">🖼️</span>Pictogramas (Correo)</a>
+    <a class="cat-btn" href="https://wordwall.net/es/resource/111248983/pictogramas?ref=community" target="_blank" rel="noopener"><span class="emoji">🖼️</span>Pictogramas (Mcamlar)</a>
+    <a class="cat-btn" href="https://wordwall.net/es/resource/28753617/las-estaciones-del-a%C3%B1o?ref=community" target="_blank" rel="noopener"><span class="emoji">🍂</span>Estaciones del Año</a>
+    <a class="cat-btn" href="https://wordwall.net/es/resource/100831638/tarjetas-pictogramas?ref=community" target="_blank" rel="noopener"><span class="emoji">🎴</span>Tarjetas Pictogramas</a>
+    <a class="cat-btn" href="https://wordwall.net/es/resource/58745695/memory-rutinas-pictogramas?ref=community" target="_blank" rel="noopener"><span class="emoji">🪥</span>Memory Rutinas</a>
+    <a class="cat-btn" href="https://wordwall.net/es/resource/54696382/ordena-las-frases-1-pictogramas-de-arasaac?ref=community" target="_blank" rel="noopener"><span class="emoji">🔤</span>Ordena Frases 1</a>
+    <a class="cat-btn" href="https://wordwall.net/es/resource/54697633/ordena-las-frases-3-pictogramas-de-arasaac?ref=community" target="_blank" rel="noopener"><span class="emoji">🔤</span>Ordena Frases 3</a>
+    <a class="cat-btn" href="https://wordwall.net/es/resource/54698007/ordena-las-frases-4-pictogramas-de-arasaac?ref=community" target="_blank" rel="noopener"><span class="emoji">🔤</span>Ordena Frases 4</a>
+    <a class="cat-btn" href="https://wordwall.net/es/resource/54699341/ordena-las-frases-6-pictogramas-de-arasaac?ref=community" target="_blank" rel="noopener"><span class="emoji">🔤</span>Ordena Frases 6</a>
+    <a class="cat-btn" href="https://wordwall.net/es/resource/69877775/juego-pictogramas?ref=community" target="_blank" rel="noopener"><span class="emoji">🎲</span>Juego Pictogramas</a>
+    <a class="cat-btn" href="https://wordwall.net/es/resource/32476426/1-pictogramas?ref=community" target="_blank" rel="noopener"><span class="emoji">1️⃣</span>Pictogramas (Serena)</a>
+    <a class="cat-btn" href="https://wordwall.net/es/resource/89176473/oraciones-con-pictogramas?ref=community" target="_blank" rel="noopener"><span class="emoji">💬</span>Oraciones Pictogramas</a>
+    <a class="cat-btn" href="https://wordwall.net/es/resource/2727892/pictogramas-t?ref=community" target="_blank" rel="noopener"><span class="emoji">🎡</span>Pictogramas T</a>
+    <a class="cat-btn" href="https://wordwall.net/es/resource/55362553/primavera-insectos-memorama-pictogramas?ref=community" target="_blank" rel="noopener"><span class="emoji">🐞</span>Memorama Insectos</a>
+    <a class="cat-btn" href="https://wordwall.net/es/resource/106748967/saltar-dormir-4x4-autisme-pictogrames?ref=community" target="_blank" rel="noopener"><span class="emoji">🛌</span>Saltar-Dormir ( )</a>
+    <a class="cat-btn" href="https://wordwall.net/es/resource/73923880/pfpp-tea-rutinas-ni%C3%B1os?ref=community" target="_blank" rel="noopener"><span class="emoji">📅</span>Rutinas Niños ( )</a>
+  </div>
+
+</div>
+
+<!-- POPUP AYUDA (único, para el adulto) -->
+<div class="popup-overlay" id="popup-ayuda" onclick="if(event.target===this)this.classList.remove('visible')">
+  <div class="popup-caja">
+    <h3>❓ Ayuda para el adulto</h3>
+    <p>Los 21 juegos de esta página son de <strong>emparejar</strong> u <strong>ordenar imágenes/pictogramas</strong> (rutinas, emociones, acciones), pensados para chicos que todavía no leen: casi no tienen texto que haya que descifrar, solo dibujos para relacionar.</p>
+    <p><strong>Sobre el sonido:</strong> algunos de estos juegos pueden tener audio grabado por el docente que los creó (una voz que lee la consigna), pero no todos lo incluyen. Te recomendamos abrirlo primero vos con el volumen activado para confirmar si ese juego en particular tiene voz antes de dárselo al chico.</p>
+    <p>Cada botón azul de abajo lleva <strong>directo al juego en Wordwall</strong>, sin pasos intermedios. Son recursos gratuitos hechos por otros docentes; no hace falta registrarse para jugarlos.</p>
+    <p>Recomendación: sentate al lado del chico las primeras veces, para acompañar y señalar si hace falta.</p>
+    <button onclick="document.getElementById('popup-ayuda').classList.remove('visible')">Entendido / Cerrar</button>
+  </div>
+</div>
+
+</body>
+</html>
